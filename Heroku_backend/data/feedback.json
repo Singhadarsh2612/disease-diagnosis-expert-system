@@ -1,0 +1,478 @@
+[
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-10-30T20:18:48.082144Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-10-30T20:19:02.732130Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-30T20:21:30.337851Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-30T20:35:13.051644Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-30T21:18:39.203367Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-10-30T21:18:44.382145Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-30T21:19:03.500097Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-10-30T21:19:03.565334Z"
+  },
+  {
+    "session_id": "test-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Works great!",
+    "timestamp": "2026-10-30T21:19:12.002732Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-30T21:33:02.789680Z"
+  },
+  {
+    "session_id": "9247fb31-a4af-4760-b9da-e01188be6017",
+    "satisfied": true,
+    "final_disease": "Kidney Stone",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-31T13:17:00.982062Z"
+  },
+  {
+    "session_id": "36f026ef-4fe4-468e-9781-518021cd73b7",
+    "satisfied": true,
+    "final_disease": "Gastroenteritis",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-10-31T13:30:46.541800Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T04:53:12.371769Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T04:53:12.451764Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T04:53:18.984052Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T04:53:19.067182Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T04:53:32.847656Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T04:53:32.921069Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T04:56:27.212520Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T04:56:27.296280Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T04:56:36.244171Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T04:56:36.329642Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:24:16.275058Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:24:16.358551Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:24:23.309428Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:24:23.393472Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:27:49.390798Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:27:49.478789Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:37:52.258946Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:37:52.345781Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:51:05.252967Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:51:05.339132Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:55:01.566552Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:55:01.653164Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T05:58:56.183688Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T05:58:56.276011Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:20:05.070567Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:20:05.165001Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:20:52.955247Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:20:53.047490Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:24:24.471588Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:24:24.575541Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:29:45.371494Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:29:45.467676Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:31:20.138480Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:31:20.241500Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T07:31:39.175051Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T07:31:39.269603Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T16:34:08.801902Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T16:34:08.891861Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T16:35:09.306442Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T16:35:09.397063Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T16:35:39.586451Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T16:35:39.676752Z"
+  },
+  {
+    "session_id": "bb6faf85-bfe4-4618-b61e-f91045b50be1",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T16:35:39.709156Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T16:39:49.490890Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T16:39:49.586108Z"
+  },
+  {
+    "session_id": "e253fce8-ab70-4ead-8487-33a00f9caed5",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T16:39:49.620883Z"
+  }
+]

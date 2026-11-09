@@ -1,0 +1,54 @@
+[
+  {
+    "version": "1.0.4",
+    "saved_at": "2026-11-09T11:34:23",
+    "edited_by": "Dr. Mehta",
+    "backup_file": "knowledge_base_20261109_113423.json",
+    "changes": [
+      {
+        "type": "edited",
+        "disease": "Curl Demo Syndrome",
+        "details": "symptoms added: increased_sweating"
+      }
+    ]
+  },
+  {
+    "version": "1.0.5",
+    "saved_at": "2026-11-09T12:52:17",
+    "edited_by": "Dr S",
+    "backup_file": "knowledge_base_20261109_125217.json",
+    "changes": [
+      {
+        "type": "symptom_added",
+        "disease": "Dizzy spells",
+        "details": "Added symptom 'dizzy_spells' in category 'Common'"
+      }
+    ]
+  },
+  {
+    "version": "1.0.6",
+    "saved_at": "2026-11-09T13:00:34",
+    "edited_by": "Dr. Specialist",
+    "backup_file": "knowledge_base_20261109_130034.json",
+    "changes": [
+      {
+        "type": "symptom_added",
+        "disease": "Loss of balance",
+        "details": "Added symptom 'loss_of_balance' in category 'Neurological'"
+      }
+    ]
+  },
+  {
+    "version": "1.0.7",
+    "saved_at": "2026-11-09T13:01:02",
+    "edited_by": "Dr. Specialist",
+    "backup_file": "knowledge_base_20261109_130102.json",
+    "changes": [
+      {
+        "type": "edited",
+        "disease": "Curl Demo Syndrome",
+        "details": "symptoms added: loss_of_balance"
+      }
+    ]
+  }
+]
