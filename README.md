@@ -85,6 +85,19 @@ SECRET_KEY=your-long-random-secret-key-here
 
 ---
 
+## Semantic Symptom Extraction
+
+The expert system features local semantic symptom extraction for free-text patient descriptions:
+- **Embedding Model:** `fastembed` (ONNX runtime) with model `BAAI/bge-small-en-v1.5` (384-dimensional dense vectors).
+- **Local & Offline:** Downloaded model files and precomputed vector indexes are stored under `Heroku_backend/models/`. After initial download, it operates entirely offline without external API calls.
+- **Similarity Thresholds:**
+  - **Semantic (Fastembed):** Matches $\ge 0.75$, Suggestions $0.55 \le \text{score} < 0.75$, Unrecognized $< 0.55$.
+  - **TF-IDF Fallback:** Matches $\ge 0.60$, Suggestions $0.40 \le \text{score} < 0.60$, Unrecognized $< 0.40$.
+- **Automatic Index Invalidation:** Cache timestamps are checked against `knowledge_base.json` and `synonyms.json`; any knowledge update automatically rebuilds the vector index.
+- **Resilience:** If model files are missing or fastembed fails to load, the system logs a warning, falls back to dictionary-only extraction, and reports `"nlp": "dictionary"` in `/api/health` without crashing.
+
+---
+
 ## API Endpoints
 
 ### Patient Endpoints (Public)

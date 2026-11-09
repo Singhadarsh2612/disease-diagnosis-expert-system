@@ -19,6 +19,8 @@ export default function ChatPage() {
   const [freeText, setFreeText] = useState('');
   const [extracting, setExtracting] = useState(false);
   const [extractError, setExtractError] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [unrecognized, setUnrecognized] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   // Load symptom categories on mount
@@ -65,7 +67,13 @@ export default function ChatPage() {
     try {
       const res = await extractSymptoms(freeText.trim());
       const matched = res.data.matched || [];
-      if (matched.length === 0) {
+      const sugs = res.data.suggestions || [];
+      const unrec = res.data.unrecognized || [];
+
+      setSuggestions(sugs);
+      setUnrecognized(unrec);
+
+      if (matched.length === 0 && sugs.length === 0) {
         setExtractError('No known symptoms found. Try selecting from the list below.');
       } else {
         matched.forEach((s) => dispatch({ type: 'ADD_SYMPTOM', payload: s }));
@@ -78,6 +86,15 @@ export default function ChatPage() {
     }
   }
 
+  function handleAcceptSuggestion(sug) {
+    dispatch({ type: 'ADD_SYMPTOM', payload: sug.symptom });
+    setSuggestions((prev) => prev.filter((s) => s.symptom !== sug.symptom));
+  }
+
+  function handleDismissSuggestion(symptom) {
+    setSuggestions((prev) => prev.filter((s) => s.symptom !== symptom));
+  }
+
   function handleFinalize() {
     if (possibleDiseases.length > 0) {
       dispatch({ type: 'SET_FINAL_DIAGNOSIS', payload: possibleDiseases[0] });
@@ -88,6 +105,8 @@ export default function ChatPage() {
     setShowAll(false);
     setFreeText('');
     setExtractError('');
+    setSuggestions([]);
+    setUnrecognized([]);
     dispatch({ type: 'RESET' });
   }
 
@@ -138,6 +157,52 @@ export default function ChatPage() {
                 </button>
               </div>
               {extractError && <p style={{ color: 'var(--emergency)', fontSize: '0.83rem', marginTop: '0.5rem' }}>{extractError}</p>}
+
+              {/* Suggestions chips */}
+              {suggestions.length > 0 && (
+                <div style={{ marginTop: '0.6rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  {suggestions.map((sug) => (
+                    <div
+                      key={sug.symptom}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        background: 'var(--neutral-100)',
+                        border: '1px solid var(--neutral-200)',
+                        borderRadius: 'var(--radius-sm)',
+                        padding: '0.35rem 0.65rem',
+                        fontSize: '0.82rem',
+                        alignSelf: 'flex-start',
+                      }}
+                    >
+                      <span>Did you mean <strong>{sug.display_name}</strong>?</span>
+                      <button
+                        className="btn btn-primary btn-sm"
+                        style={{ padding: '0.15rem 0.5rem', fontSize: '0.75rem' }}
+                        onClick={() => handleAcceptSuggestion(sug)}
+                      >
+                        Yes
+                      </button>
+                      <button
+                        className="btn btn-secondary btn-sm"
+                        style={{ padding: '0.15rem 0.5rem', fontSize: '0.75rem' }}
+                        onClick={() => handleDismissSuggestion(sug.symptom)}
+                      >
+                        No
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Unrecognized note */}
+              {unrecognized.length > 0 && (
+                <p style={{ fontSize: '0.78rem', color: 'var(--neutral-400)', marginTop: '0.4rem' }}>
+                  Couldn't understand: {unrecognized.join(', ')}
+                </p>
+              )}
+
               <p style={{ fontSize: '0.78rem', color: 'var(--neutral-400)', marginTop: '0.4rem' }}>
                 Or select directly from the symptom list below.
               </p>

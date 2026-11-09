@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "created": "2024-01-01",
     "disclaimer": "This seed data is for academic demonstration only. It is not medically validated. Do not use for actual medical diagnosis.",
     "disease_count": 46,
     "symptom_count": 173,
-    "last_edited_by": "Dr. Specialist",
-    "saved_at": "2026-11-09T13:01:02"
+    "last_edited_by": "Dr. Regression Test",
+    "saved_at": "2026-11-09T22:39:04"
   },
   "symptom_categories": {
     "Common": [
@@ -156,7 +156,7 @@
         "Rest"
       ],
       "icd10": "Z99",
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "last_edited_by": "Dr. Specialist",
       "last_edited_at": "2026-11-09T13:01:02"
     },
@@ -181,7 +181,7 @@
         "Aconite 30C (early stages)",
         "Natrum Muriaticum 6C (runny nose)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J00"
     },
     {
@@ -207,7 +207,7 @@
         "Gelsemium 30C (chills, weakness)",
         "Bryonia 30C (body ache)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J10"
     },
     {
@@ -231,7 +231,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "Isolate, get tested, monitor oxygen levels. Seek emergency care if breathing is severely impaired.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "U07"
     },
     {
@@ -256,7 +256,7 @@
         "Belladonna 30C (throbbing pain)",
         "Iris Versicolor 30C (visual aura)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "G43"
     },
     {
@@ -278,7 +278,7 @@
       "homeopathic_remedies": [
         "Nux Vomica 30C (stress-related)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "G44.2"
     },
     {
@@ -302,7 +302,7 @@
       "homeopathic_remedies": [
         "Arsenicum Album 30C (vomiting + diarrhea)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "A09"
     },
     {
@@ -326,7 +326,7 @@
       "recommended_action": "emergency",
       "next_steps": "Requires antibiotics. Hospitalization may be needed. Ensure safe food and water practices.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "A01.0"
     },
     {
@@ -350,7 +350,7 @@
       "recommended_action": "emergency",
       "next_steps": "Seek immediate medical care. Antimalarial drugs required. Do not self-treat.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "B54"
     },
     {
@@ -375,7 +375,7 @@
       "recommended_action": "emergency",
       "next_steps": "Seek immediate medical care. Monitor platelet count. Avoid NSAIDs.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "A90"
     },
     {
@@ -397,7 +397,7 @@
       "recommended_action": "emergency",
       "next_steps": "Seek immediate medical care. Antibiotics or antivirals required. Hospitalization may be needed.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J18"
     },
     {
@@ -421,7 +421,7 @@
       "homeopathic_remedies": [
         "Hepar Sulphuris 30C (rattling cough)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J40"
     },
     {
@@ -443,7 +443,7 @@
       "homeopathic_remedies": [
         "Arsenicum Album 30C (asthma attacks)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J45"
     },
     {
@@ -467,7 +467,7 @@
       "homeopathic_remedies": [
         "Rauwolfia Serpentina (traditional herbalism for BP)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "I10"
     },
     {
@@ -491,7 +491,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "Blood glucose monitoring, dietary changes, exercise, prescribed medication. Regular specialist follow-up.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "E11"
     },
     {
@@ -517,7 +517,7 @@
       "homeopathic_remedies": [
         "Ferrum Phosphoricum 6X (iron-deficiency anemia)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "D64"
     },
     {
@@ -536,13 +536,13 @@
         "fever",
         "lower_back_pain"
       ],
-      "description": "Bacterial infection in any part of the urinary system \u2014 kidneys, ureters, bladder, or urethra.",
+      "description": "Bacterial infection in any part of the urinary system — kidneys, ureters, bladder, or urethra.",
       "recommended_action": "consult-doctor",
-      "next_steps": "Antibiotics required. Increase fluid intake. See doctor promptly \u2014 untreated UTI can affect kidneys.",
+      "next_steps": "Antibiotics required. Increase fluid intake. See doctor promptly — untreated UTI can affect kidneys.",
       "homeopathic_remedies": [
         "Cantharis 30C (burning urination)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "N39.0"
     },
     {
@@ -561,13 +561,13 @@
         "hoarseness",
         "chronic_cough"
       ],
-      "description": "Gastroesophageal reflux disease \u2014 chronic acid reflux damaging the esophageal lining.",
+      "description": "Gastroesophageal reflux disease — chronic acid reflux damaging the esophageal lining.",
       "recommended_action": "consult-doctor",
       "next_steps": "Avoid trigger foods, don't lie down after meals. OTC antacids. Prescription PPI medication.",
       "homeopathic_remedies": [
         "Nux Vomica 30C (after spicy food)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "K21"
     },
     {
@@ -585,11 +585,11 @@
         "abdominal_rigidity",
         "migration_of_pain_to_right_lower_quadrant"
       ],
-      "description": "Inflammation of the appendix \u2014 a medical emergency requiring surgery.",
+      "description": "Inflammation of the appendix — a medical emergency requiring surgery.",
       "recommended_action": "emergency",
       "next_steps": "Seek IMMEDIATE emergency care. Do not eat, drink, or take pain relief that may mask symptoms.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "K37"
     },
     {
@@ -609,13 +609,13 @@
         "itching",
         "yellowing_of_skin"
       ],
-      "description": "Yellowing of skin and eyes due to elevated bilirubin \u2014 indicates liver, bile duct, or blood disorder.",
+      "description": "Yellowing of skin and eyes due to elevated bilirubin — indicates liver, bile duct, or blood disorder.",
       "recommended_action": "consult-doctor",
       "next_steps": "Blood tests to determine cause (hepatitis, gallstones, etc.). Specialist evaluation required.",
       "homeopathic_remedies": [
-        "Chelidonium Majus 30C (liver support \u2014 traditional)"
+        "Chelidonium Majus 30C (liver support — traditional)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "R17"
     },
     {
@@ -639,7 +639,7 @@
       "homeopathic_remedies": [
         "Rhus Toxicodendron 30C (itchy blisters)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "B01"
     },
     {
@@ -664,7 +664,7 @@
       "homeopathic_remedies": [
         "Allium Cepa 30C (watery eyes + runny nose)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J30"
     },
     {
@@ -690,7 +690,7 @@
       "homeopathic_remedies": [
         "Kali Bichromicum 30C (thick nasal discharge)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J32"
     },
     {
@@ -715,7 +715,7 @@
       "homeopathic_remedies": [
         "Mercurius Solubilis 30C (swollen, tender tonsils)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "J35"
     },
     {
@@ -733,13 +733,13 @@
         "blurred_vision",
         "swollen_eyelids"
       ],
-      "description": "Inflammation of the conjunctiva \u2014 the clear membrane covering the white part of the eye.",
+      "description": "Inflammation of the conjunctiva — the clear membrane covering the white part of the eye.",
       "recommended_action": "consult-doctor",
       "next_steps": "Good hygiene, avoid touching eyes. Antibiotic drops for bacterial; antihistamine for allergic.",
       "homeopathic_remedies": [
         "Euphrasia 30C (eye symptoms)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "H10"
     },
     {
@@ -764,7 +764,7 @@
       "homeopathic_remedies": [
         "Rhus Toxicodendron 30C (stiffness improving with movement)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "M05"
     },
     {
@@ -787,7 +787,7 @@
       "homeopathic_remedies": [
         "Calcarea Phosphorica 6X (bone health)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "M19"
     },
     {
@@ -810,7 +810,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "H. pylori test and treatment. PPIs. Avoid NSAIDs, alcohol, smoking. Endoscopy if severe.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "K27"
     },
     {
@@ -834,7 +834,7 @@
       "homeopathic_remedies": [
         "Lycopodium 30C (bloating and gas)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "K58"
     },
     {
@@ -858,7 +858,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "TSH blood test. Levothyroxine replacement therapy. Regular monitoring.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "E03"
     },
     {
@@ -882,7 +882,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "TSH and thyroid antibody tests. Antithyroid drugs, radioiodine, or surgery depending on severity.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "E05"
     },
     {
@@ -905,9 +905,9 @@
       "recommended_action": "emergency",
       "next_steps": "Seek medical care. IV fluids, pain management. CT scan to assess. Surgery or lithotripsy for large stones.",
       "homeopathic_remedies": [
-        "Berberis Vulgaris 30C (renal colic \u2014 traditional)"
+        "Berberis Vulgaris 30C (renal colic — traditional)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "N20"
     },
     {
@@ -931,7 +931,7 @@
       "recommended_action": "emergency",
       "next_steps": "CALL EMERGENCY SERVICES IMMEDIATELY (112/911). Do not drive yourself. Chew aspirin if available and not contraindicated.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "I21"
     },
     {
@@ -950,11 +950,11 @@
         "loss_of_coordination",
         "numbness"
       ],
-      "description": "Brain cell death due to interrupted blood supply \u2014 time-critical emergency (FAST acronym).",
+      "description": "Brain cell death due to interrupted blood supply — time-critical emergency (FAST acronym).",
       "recommended_action": "emergency",
       "next_steps": "CALL EMERGENCY SERVICES IMMEDIATELY. Note time symptoms started. Every minute counts.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "I63"
     },
     {
@@ -974,11 +974,11 @@
         "confusion",
         "seizures"
       ],
-      "description": "Inflammation of the membranes surrounding the brain and spinal cord \u2014 medical emergency.",
+      "description": "Inflammation of the membranes surrounding the brain and spinal cord — medical emergency.",
       "recommended_action": "emergency",
       "next_steps": "CALL EMERGENCY SERVICES IMMEDIATELY. IV antibiotics must be started within 1 hour.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "G03"
     },
     {
@@ -1002,7 +1002,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "Antiviral therapy, liver function monitoring, specialist referral. Vaccination for contacts.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "B16"
     },
     {
@@ -1026,7 +1026,7 @@
       "homeopathic_remedies": [
         "Graphites 30C (weeping eczema)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "L20"
     },
     {
@@ -1050,7 +1050,7 @@
       "homeopathic_remedies": [
         "Sulphur 30C (burning, itching skin)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "L40"
     },
     {
@@ -1074,7 +1074,7 @@
       "recommended_action": "emergency",
       "next_steps": "USE EPINEPHRINE AUTO-INJECTOR (EpiPen) AND CALL EMERGENCY SERVICES IMMEDIATELY.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "T78.2"
     },
     {
@@ -1100,7 +1100,7 @@
       "homeopathic_remedies": [
         "Aconite 30C (sudden panic, fear of death)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "F41.0"
     },
     {
@@ -1124,7 +1124,7 @@
       "homeopathic_remedies": [
         "Colchicum 30C (gout with extreme sensitivity)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "M10"
     },
     {
@@ -1145,7 +1145,7 @@
       "recommended_action": "consult-doctor",
       "next_steps": "Prescription permethrin or ivermectin. Wash all clothing/bedding. Treat all household contacts.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "B86"
     },
     {
@@ -1163,11 +1163,11 @@
         "rapid_heartbeat",
         "low_blood_pressure"
       ],
-      "description": "A bleeding peptic ulcer \u2014 a gastrointestinal emergency requiring urgent endoscopy.",
+      "description": "A bleeding peptic ulcer — a gastrointestinal emergency requiring urgent endoscopy.",
       "recommended_action": "emergency",
       "next_steps": "SEEK EMERGENCY CARE IMMEDIATELY. IV fluids, blood transfusion may be needed. Emergency endoscopy.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "K25.0"
     },
     {
@@ -1190,9 +1190,9 @@
       "recommended_action": "consult-doctor",
       "next_steps": "CBT therapy, possibly SSRIs. Mindfulness, regular exercise. Avoid excessive caffeine.",
       "homeopathic_remedies": [
-        "Passiflora Incarnata (calming \u2014 traditional)"
+        "Passiflora Incarnata (calming — traditional)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "F41"
     },
     {
@@ -1216,7 +1216,7 @@
       "recommended_action": "self-care",
       "next_steps": "Oral rehydration salts. If severe/confused, seek emergency care for IV fluids.",
       "homeopathic_remedies": [],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "E86"
     },
     {
@@ -1242,7 +1242,7 @@
       "homeopathic_remedies": [
         "Ferrum Metallicum 30C (anemia with pallor)"
       ],
-      "remedies_disclaimer": "Traditional suggestions only \u2014 not a substitute for medical care.",
+      "remedies_disclaimer": "Traditional suggestions only — not a substitute for medical care.",
       "icd10": "D50"
     }
   ],

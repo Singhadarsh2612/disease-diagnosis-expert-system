@@ -474,5 +474,121 @@
     ],
     "comments": "",
     "timestamp": "2026-11-09T16:39:49.620883Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T17:04:56.215325Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T17:04:56.327383Z"
+  },
+  {
+    "session_id": "67f08e7c-fd81-409c-9c02-7d9d3a3fd0c9",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T17:04:56.362915Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T17:08:53.685641Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T17:08:53.781822Z"
+  },
+  {
+    "session_id": "23899b92-2c06-4257-830d-f547ef25619a",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T17:08:53.817409Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T17:15:25.554657Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T17:15:25.668647Z"
+  },
+  {
+    "session_id": "40e0e16a-e73e-487d-aa64-8f1a45766ac9",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T17:15:25.705998Z"
+  },
+  {
+    "session_id": "pytest-session",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "",
+    "timestamp": "2026-11-09T17:21:17.608755Z"
+  },
+  {
+    "session_id": "test-session-123",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [],
+    "comments": "Great tool!",
+    "timestamp": "2026-11-09T17:21:17.733847Z"
+  },
+  {
+    "session_id": "df3b8727-02cb-4807-a45d-1ecb9a4618d5",
+    "satisfied": true,
+    "final_disease": "Common Cold",
+    "missed_symptoms": [],
+    "denied_symptoms": [
+      "sore_throat"
+    ],
+    "comments": "",
+    "timestamp": "2026-11-09T17:21:17.770159Z"
   }
 ]

@@ -1,0 +1,484 @@
+{
+  "_meta": {
+    "description": "Layperson terms mapped to canonical symptom names. Supports NLP extraction.",
+    "version": "1.0.0"
+  },
+  "synonyms": {
+    "headache": [
+      "head hurts",
+      "head is pounding",
+      "head pain",
+      "my head hurts",
+      "pounding head",
+      "head ache",
+      "head is killing me",
+      "migraine",
+      "throbbing head",
+      "pressure in head",
+      "head pressure"
+    ],
+    "fever": [
+      "high temperature",
+      "running a fever",
+      "high temp",
+      "body hot",
+      "temperature",
+      "feeling hot",
+      "have a fever",
+      "feverish",
+      "hot body"
+    ],
+    "chills": [
+      "feeling cold",
+      "shivering",
+      "shaking with cold",
+      "goosebumps",
+      "body shaking",
+      "cold shivers",
+      "rigor"
+    ],
+    "nausea": [
+      "feel like vomiting",
+      "feeling sick",
+      "sick to my stomach",
+      "queasy",
+      "nauseated",
+      "want to throw up",
+      "feel sick",
+      "stomach turning"
+    ],
+    "vomiting": [
+      "throwing up",
+      "puking",
+      "being sick",
+      "vomit",
+      "threw up",
+      "emesis",
+      "retching",
+      "barfing"
+    ],
+    "diarrhea": [
+      "loose stools",
+      "loose motions",
+      "runny stool",
+      "frequent bowel",
+      "stomach upset",
+      "watery stool",
+      "runs",
+      "loose poop"
+    ],
+    "constipation": [
+      "can't poop",
+      "hard stool",
+      "no bowel movement",
+      "difficulty passing stool",
+      "blocked",
+      "difficulty going to bathroom"
+    ],
+    "abdominal_pain": [
+      "stomach ache",
+      "tummy ache",
+      "belly pain",
+      "belly ache",
+      "stomach pain",
+      "gut pain",
+      "abdominal cramp",
+      "stomach cramps",
+      "tummy pain"
+    ],
+    "chest_pain": [
+      "chest hurts",
+      "chest tightness",
+      "pain in chest",
+      "chest pressure",
+      "tightness in chest",
+      "squeezing in chest"
+    ],
+    "shortness_of_breath": [
+      "can't breathe",
+      "difficulty breathing",
+      "breathless",
+      "out of breath",
+      "hard to breathe",
+      "breathing difficulty",
+      "gasping",
+      "trouble breathing",
+      "hard time breathing"
+    ],
+    "cough": [
+      "coughing",
+      "keep coughing",
+      "persistent cough",
+      "hacking cough",
+      "cough cough"
+    ],
+    "sore_throat": [
+      "throat pain",
+      "throat hurts",
+      "pain when swallowing",
+      "scratchy throat",
+      "throat is sore",
+      "throat ache"
+    ],
+    "runny_nose": [
+      "runny nose",
+      "nose is running",
+      "dripping nose",
+      "snot",
+      "nasal discharge",
+      "nose is dripping"
+    ],
+    "nasal_congestion": [
+      "blocked nose",
+      "stuffy nose",
+      "can't breathe through nose",
+      "nose is blocked",
+      "stuffed up"
+    ],
+    "sneezing": [
+      "keep sneezing",
+      "sneezing a lot",
+      "sneeze",
+      "achoo"
+    ],
+    "fatigue": [
+      "tired",
+      "exhausted",
+      "no energy",
+      "very tired",
+      "wiped out",
+      "lethargy",
+      "lethargic",
+      "low energy",
+      "run down",
+      "worn out"
+    ],
+    "weakness": [
+      "feeling weak",
+      "no strength",
+      "weak",
+      "body feels weak",
+      "feeble"
+    ],
+    "dizziness": [
+      "dizzy",
+      "lightheaded",
+      "feeling faint",
+      "vertigo",
+      "spinning sensation",
+      "world spinning",
+      "wobbly"
+    ],
+    "rash": [
+      "skin rash",
+      "bumps on skin",
+      "red spots",
+      "skin breaking out",
+      "skin reaction",
+      "spots on skin"
+    ],
+    "itching": [
+      "itchy",
+      "itchy skin",
+      "skin itching",
+      "want to scratch",
+      "scratching a lot",
+      "itch"
+    ],
+    "joint_pain": [
+      "aching joints",
+      "joints hurt",
+      "joint ache",
+      "joint inflammation",
+      "achy joints"
+    ],
+    "muscle_pain": [
+      "body ache",
+      "muscle ache",
+      "aching muscles",
+      "muscles hurt",
+      "myalgia",
+      "body pain",
+      "achy",
+      "aches and pains"
+    ],
+    "back_pain": [
+      "back hurts",
+      "sore back",
+      "backache",
+      "pain in back",
+      "lower back pain"
+    ],
+    "frequent_urination": [
+      "urinating often",
+      "going to bathroom often",
+      "peeing a lot",
+      "need to pee frequently",
+      "polyuria",
+      "frequent toilet trips"
+    ],
+    "painful_urination": [
+      "pain when urinating",
+      "hurts to pee",
+      "dysuria",
+      "stinging when peeing",
+      "burning when urinating"
+    ],
+    "burning_urination": [
+      "burning when peeing",
+      "burning sensation urinating",
+      "sting when urinating"
+    ],
+    "excessive_thirst": [
+      "very thirsty",
+      "can't quench thirst",
+      "drinking lots of water",
+      "always thirsty",
+      "polydipsia"
+    ],
+    "excessive_hunger": [
+      "always hungry",
+      "very hungry",
+      "can't stop eating",
+      "polyphagia"
+    ],
+    "blurred_vision": [
+      "can't see clearly",
+      "vision is blurry",
+      "fuzzy vision",
+      "vision problems",
+      "trouble seeing"
+    ],
+    "sensitivity_to_light": [
+      "light hurts eyes",
+      "can't stand bright light",
+      "photophobia",
+      "light sensitivity"
+    ],
+    "sensitivity_to_sound": [
+      "noise bothers me",
+      "sounds are too loud",
+      "phonophobia",
+      "can't stand noise"
+    ],
+    "stiff_neck": [
+      "neck is stiff",
+      "can't move neck",
+      "neck pain",
+      "rigid neck"
+    ],
+    "swollen_joints": [
+      "swollen joints",
+      "puffy joints",
+      "inflamed joints"
+    ],
+    "palpitations": [
+      "heart pounding",
+      "heart racing",
+      "can feel my heartbeat",
+      "irregular heartbeat feeling",
+      "fluttering heart"
+    ],
+    "rapid_heartbeat": [
+      "fast heart rate",
+      "tachycardia",
+      "heart beating fast",
+      "racing heart"
+    ],
+    "eye_redness": [
+      "red eyes",
+      "bloodshot eyes",
+      "irritated eyes"
+    ],
+    "eye_discharge": [
+      "discharge from eyes",
+      "gooey eyes",
+      "crusty eyes",
+      "eye secretions"
+    ],
+    "watery_eyes": [
+      "eyes watering",
+      "tearing eyes",
+      "eyes are tearing",
+      "lacrimation"
+    ],
+    "loss_of_taste": [
+      "can't taste",
+      "food has no taste",
+      "ageusia",
+      "lost my taste"
+    ],
+    "loss_of_smell": [
+      "can't smell",
+      "anosmia",
+      "lost my sense of smell",
+      "things have no smell"
+    ],
+    "sweating": [
+      "sweating a lot",
+      "excessive sweating",
+      "night sweats",
+      "drenched in sweat"
+    ],
+    "heartburn": [
+      "acid reflux",
+      "burning in chest",
+      "fire in chest",
+      "acid in throat",
+      "GERD"
+    ],
+    "jaundice": [
+      "yellow skin",
+      "yellowing of skin",
+      "eyes turned yellow",
+      "skin turned yellow"
+    ],
+    "dark_urine": [
+      "urine is dark",
+      "dark yellow urine",
+      "brown urine",
+      "tea-colored urine"
+    ],
+    "pale_stools": [
+      "white stools",
+      "light colored stools",
+      "clay-colored stools"
+    ],
+    "blood_in_stool": [
+      "blood in poo",
+      "rectal bleeding",
+      "bloody stool",
+      "blood when wiping"
+    ],
+    "bloating": [
+      "feeling bloated",
+      "distended stomach",
+      "stomach is bloated",
+      "gas and bloating"
+    ],
+    "pallor": [
+      "looking pale",
+      "skin looks pale",
+      "pale complexion",
+      "whitish skin"
+    ],
+    "weight_loss": [
+      "losing weight",
+      "lost weight",
+      "unintentional weight loss"
+    ],
+    "swollen_lymph_nodes": [
+      "swollen glands",
+      "lumps in neck",
+      "glands are swollen"
+    ],
+    "numbness": [
+      "numbness",
+      "can't feel",
+      "no sensation",
+      "tingling numbness"
+    ],
+    "tingling": [
+      "pins and needles",
+      "tingling sensation",
+      "prickling feeling"
+    ],
+    "confusion": [
+      "confused",
+      "not thinking clearly",
+      "disoriented",
+      "muddled"
+    ],
+    "seizures": [
+      "fit",
+      "convulsion",
+      "shaking uncontrollably",
+      "epileptic fit"
+    ],
+    "fainting": [
+      "fainted",
+      "passed out",
+      "lost consciousness briefly",
+      "blacked out"
+    ],
+    "facial_pain": [
+      "face hurts",
+      "facial pressure",
+      "pain in face",
+      "sinus pressure"
+    ],
+    "ear_pain": [
+      "ear hurts",
+      "ache in ear",
+      "earache"
+    ],
+    "poor_wound_healing": [
+      "wounds not healing",
+      "slow healing",
+      "cuts not closing"
+    ],
+    "tremors": [
+      "shaking hands",
+      "body trembles",
+      "shaky",
+      "trembling"
+    ],
+    "anxiety": [
+      "feeling anxious",
+      "nervous",
+      "worried",
+      "panic",
+      "on edge"
+    ],
+    "depression": [
+      "feeling depressed",
+      "sad all the time",
+      "low mood",
+      "no motivation"
+    ],
+    "insomnia": [
+      "can't sleep",
+      "trouble sleeping",
+      "sleepless",
+      "not sleeping well"
+    ],
+    "hair_loss": [
+      "losing hair",
+      "baldness",
+      "thinning hair",
+      "hair falling out"
+    ],
+    "dry_skin": [
+      "skin is dry",
+      "flaky skin",
+      "cracked skin"
+    ],
+    "hives": [
+      "urticaria",
+      "welts",
+      "itchy bumps",
+      "allergic rash"
+    ],
+    "blisters": [
+      "fluid-filled bumps",
+      "water blisters",
+      "vesicles"
+    ],
+    "wheezing": [
+      "whistling breath",
+      "wheeze",
+      "noisy breathing",
+      "squeaky breathing"
+    ],
+    "chest_tightness": [
+      "tight chest",
+      "chest feels tight",
+      "pressure on chest"
+    ],
+    "nosebleed": [
+      "bleeding nose",
+      "epistaxis",
+      "nose is bleeding"
+    ]
+  }
+}

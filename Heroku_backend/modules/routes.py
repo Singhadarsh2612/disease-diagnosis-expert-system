@@ -13,7 +13,7 @@ from flask import Blueprint, Response, jsonify, request
 from .csv_processor import generate_csv_template, parse_csv
 from .diagnosis import get_engine
 from .doctor_auth import require_doctor
-from .nlp import extract_symptoms
+from .semantic_nlp import extract_symptoms, get_nlp_mode
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +66,7 @@ def health():
         "kb_version": engine.kb_version,
         "disease_count": engine.disease_count,
         "symptom_count": engine.symptom_count,
+        "nlp": get_nlp_mode(),
         "timestamp": datetime.utcnow().isoformat() + "Z",
     })
 
@@ -154,7 +155,12 @@ def extract_symptoms_endpoint():
     engine = get_engine()
     all_syms = list(engine._kb.get("all_symptoms", []))
     result = extract_symptoms(text, all_syms)
-    return jsonify({"matched": result["matched"], "unrecognized": result["unrecognized"]})
+    return jsonify({
+        "matched": result["matched"],
+        "unrecognized": result["unrecognized"],
+        "suggestions": result.get("suggestions", []),
+        "method": result.get("method", "dictionary"),
+    })
 
 
 # ── GET /api/diseases ─────────────────────────────────────────────────────────

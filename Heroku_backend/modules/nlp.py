@@ -66,11 +66,19 @@ def reload_synonyms() -> Dict[str, str]:
 
 
 def _is_negated(text: str, phrase: str) -> bool:
-    """Return True if `phrase` appears right after a negation word in `text`."""
-    for neg in NEGATION_WORDS:
-        pattern = neg + phrase
-        if pattern in text:
-            return True
+    """Return True if `phrase` appears right after a negation expression in `text`."""
+    text_lower = text.lower()
+    phrase_clean = phrase.lower().strip().replace("_", " ")
+    if not phrase_clean:
+        return False
+    # Pattern 1: Negation trigger followed optionally by filler words, then the phrase
+    neg_pattern = rf"\b(no|not|without|never|denies|denied|don't have|doesn't have|didn't have|do not have|does not have|did not have|haven't had|free of)\b(?:\s+(?:a|an|the|any|much|signs? of)\s+)?\s*{re.escape(phrase_clean)}\b"
+    if re.search(neg_pattern, text_lower):
+        return True
+    # Pattern 2: Conjunction negation: 'no fever or headache' -> headache is also negated
+    conj_pattern = rf"\b(no|not|without|never|denies|denied|don't have|doesn't have|didn't have|do not have|does not have|did not have)\b(?:\s+(?:a|an|the|any|much|signs? of)\s+)?\s*\w+(?:\s+\w+)?\s+(?:or|nor)\s+{re.escape(phrase_clean)}\b"
+    if re.search(conj_pattern, text_lower):
+        return True
     return False
 
 
