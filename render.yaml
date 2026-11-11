@@ -40,5 +40,5 @@ services:
         fromService:
           type: web
           name: disease-diagnosis-backend
-          property: host
+          property: url
 
