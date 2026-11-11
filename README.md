@@ -44,11 +44,13 @@ The repository includes a ready-to-use [`render.yaml`](render.yaml) Blueprint co
 2. Click **New +** at the top right and select **Blueprint**.
 3. Connect your GitHub repository: `Singhadarsh2612/disease-diagnosis-expert-system`.
 4. Render will parse `render.yaml` and configure two services automatically:
-   - **`disease-diagnosis-backend`** (Python Web Service running Flask + Gunicorn on Python 3.11).
-   - **`disease-diagnosis-frontend`** (Static Site serving the compiled Vite React SPA — 100% free and unlimited on Render).
+   - **`disease-diagnosis-backend`** (Python Web Service running Flask + Gunicorn on Python 3.11 — also serves `frontend/dist` directly as a unified full-stack app).
+   - **`disease-diagnosis-frontend`** (Static Site serving the compiled Vite React SPA — 100% free and unlimited on Render CDN).
 5. Click **Apply**.
-6. Render builds both services and automatically wires `VITE_API_BASE_URL` from the backend to the frontend.
-7. Once deployment finishes (usually 2–3 minutes), click on the frontend URL to open the live app!
+6. Render builds both services and automatically wires `VITE_API_BASE_URL` (`property: url`) from the backend to the frontend.
+7. Once deployment finishes (usually 3–5 minutes for the backend Python/ONNX wheels), open the live app URL!
+
+> **Note:** In production builds (`frontend/.env.production`), `VITE_API_BASE_URL` defaults to `/api` (relative path), while local development (`frontend/.env.development`) points to `http://localhost:5001/api`.
 
 ### Option B — Manual Deployment
 
@@ -90,7 +92,7 @@ source venv/bin/activate
 pytest tests/ -v
 ```
 
-All 124 tests should pass across `test_core.py`, `test_diagnosis.py`, and `test_doctor.py`.
+All 143 tests should pass across `test_core.py`, `test_diagnosis.py`, and `test_doctor.py`.
 
 ---
 
@@ -130,6 +132,7 @@ SECRET_KEY=your-long-random-secret-key-here
 6. **Instant Verification:** Switch to the patient **Diagnose** page (`/chat`), enter symptoms of your newly added/edited disease, and confirm that the expert system diagnoses it immediately with zero downtime.
 7. **Version History & Revert:** Click `🕘 Version history` to view timestamped backups and restore any prior version with one click.
 8. **CSV Export / Import:** Click `⬇️ Download CSV` for a clean export, or `⬆️ Upload CSV` to bulk update diseases.
+9. **Symptom Vocabulary Management:** Use `+ Add new symptom...` inside any symptom chip picker (with duplicate/similarity detection and automatic synonym registration), or open **Manage symptoms** to inspect symptom usage and delete unused symptoms.
 
 ---
 
@@ -152,11 +155,11 @@ The expert system features local semantic symptom extraction for free-text patie
 
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/api/health` | Health check, active engine, disease/symptom counts |
+| GET | `/api/health` | Health check, active engine, NLP mode, disease/symptom counts |
 | GET | `/api/get_initial_symptoms` | All symptoms grouped by category |
-| POST | `/api/diagnose` | `{"symptoms": [...]}` → ranked diseases, follow-ups |
-| POST | `/api/extract_symptoms` | `{"text": "..."}` → matched canonical symptoms |
-| POST | `/api/feedback` | Submit diagnosis feedback |
+| POST | `/api/diagnose` | `{"symptoms": [...], "denied_symptoms": [...]}` → ranked diseases, follow-ups |
+| POST | `/api/extract_symptoms` | `{"text": "..."}` → matched canonical symptoms, suggestions, method |
+| POST | `/api/feedback` | Submit diagnosis feedback (includes `denied_symptoms`) |
 | GET | `/api/diseases` | List diseases (paginated) |
 | GET | `/api/diseases/:id` | Single disease details |
 | GET | `/api/upload_csv/template` | Download CSV template |
@@ -169,18 +172,21 @@ The expert system features local semantic symptom extraction for free-text patie
 | GET | `/api/doctor/verify` | Verify token validity and session status |
 | GET | `/api/doctor/knowledge` | Full disease table, dropdown choices, vocabulary |
 | PUT | `/api/doctor/knowledge` | Validate and atomic save full disease catalog |
+| GET | `/api/doctor/knowledge/version` | Current knowledge base version metadata |
+| GET | `/api/doctor/changelog` | Knowledge base edit and symptom change log |
 | GET | `/api/doctor/versions` | List the last 20 knowledge base backups |
 | POST | `/api/doctor/knowledge/revert` | Revert to a specific backup version file |
 | GET | `/api/doctor/export_csv` | Export knowledge base as clean CSV |
+| POST | `/api/doctor/symptoms` | Add a new symptom with duplicate checking & synonym mapping |
+| DELETE | `/api/doctor/symptoms/:name` | Delete an unused symptom (refuses if used by disease/emergency rule) |
 | POST | `/api/upload_csv` | Bulk import / merge CSV into knowledge base |
-| POST/PUT/DEL | `/api/knowledge/*` | Granular disease/symptom manipulation |
 
 ---
 
 ## Knowledge Base
 
-- **45 diseases** across 10+ categories
-- **172 symptoms** in 8 categories
+- **46 diseases** across 10+ categories
+- **172 symptoms** in 10 categories
 - CLIPS rules with emergency/safety triggers
 - Pure-Python fallback engine (no `clipspy` required)
 
@@ -190,35 +196,48 @@ The expert system features local semantic symptom extraction for free-text patie
 
 ```
 disease-diagnosis-expert-system/
+├── render.yaml                     # Render Blueprint (Web Service + Static Site)
 ├── Heroku_backend/
-│   ├── app.py                  # Flask app entry point
+│   ├── app.py                      # Flask app entry point (also serves frontend/dist)
+│   ├── generate_clp.py             # Generates CLIPS rules from knowledge_base.json
 │   ├── modules/
-│   │   ├── routes.py           # API endpoints
-│   │   ├── diagnosis.py        # Engine orchestration
-│   │   ├── fallback_engine.py  # Pure-Python CLIPS fallback
-│   │   ├── clips_engine.py     # CLIPS integration (optional)
-│   │   ├── nlp.py              # Free-text symptom extraction
-│   │   ├── safety.py           # Emergency condition rules
-│   │   ├── csv_processor.py    # CSV import/export
-│   │   └── models.py           # Data models
+│   │   ├── routes.py               # Public patient API endpoints
+│   │   ├── doctor.py               # Doctor portal API endpoints
+│   │   ├── doctor_auth.py          # Token authentication & rate limiting
+│   │   ├── diagnosis.py            # Engine orchestration & denied-symptom penalties
+│   │   ├── fallback_engine.py      # Pure-Python CLIPS fallback
+│   │   ├── clips_engine.py         # CLIPS integration (optional)
+│   │   ├── nlp.py                  # Dictionary & n-gram symptom extraction
+│   │   ├── semantic_nlp.py         # Fastembed semantic symptom extraction & caching
+│   │   ├── safety.py               # Emergency condition rules
+│   │   ├── csv_processor.py        # CSV import/export
+│   │   └── models.py               # Data models
 │   ├── data/
-│   │   ├── knowledge_base.json # 45 diseases + 172 symptoms
-│   │   ├── disease-symptoms.clp # Generated CLIPS rules
-│   │   └── synonyms.json       # Symptom synonyms for NLP
+│   │   ├── knowledge_base.json     # Diseases, categories, and symptom vocabulary
+│   │   ├── disease-symptoms.clp    # Generated CLIPS rules
+│   │   └── synonyms.json           # Symptom synonyms for NLP
+│   ├── models/                     # Cached fastembed ONNX model & vector index
 │   └── tests/
-│       └── test_core.py        # 33 pytest tests
+│       ├── test_core.py            # Core endpoints & safety tests
+│       ├── test_diagnosis.py       # Diagnosis, denied symptoms & semantic NLP tests
+│       └── test_doctor.py          # Doctor portal & symptom management tests
 └── frontend/
+    ├── .env.development            # Points to http://localhost:5001/api for local dev
+    ├── .env.production             # Uses relative /api for production builds
     ├── src/
     │   ├── App.jsx
     │   ├── main.jsx
     │   ├── pages/
     │   │   ├── HomePage.jsx
-    │   │   ├── ChatPage.jsx    # Main diagnosis UI
-    │   │   └── HistoryPage.jsx
+    │   │   ├── ChatPage.jsx        # Main diagnosis UI (selector, NLP, follow-ups)
+    │   │   ├── HistoryPage.jsx
+    │   │   ├── DoctorLoginPage.jsx
+    │   │   └── DoctorPortalPage.jsx
     │   ├── components/
-    │   │   ├── common/         # Navbar, Footer, DisclaimerBanner
-    │   │   ├── symptoms/       # SymptomSelector, SelectedSymptomsBar
-    │   │   └── diagnosis/      # DiseaseCard, FinalDiagnosisCard, DiagnosisFeedback
+    │   │   ├── common/             # Navbar, Footer, DisclaimerBanner
+    │   │   ├── symptoms/           # SymptomSelector, SelectedSymptomsBar
+    │   │   ├── diagnosis/          # DiseaseCard, FinalDiagnosisCard, DiagnosisFeedback
+    │   │   └── doctor/             # Knowledge table, Symptom/CSV/History modals
     │   ├── context/DiagnosisContext.jsx
     │   └── services/api.js
     └── index.html
