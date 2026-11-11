@@ -1,6 +1,6 @@
 ; ===========================================================
 ; disease-symptoms.clp
-; Auto-generated from knowledge_base.json on 2026-11-11T17:06:48.734411
+; Auto-generated from knowledge_base.json on 2026-11-11T17:09:19.090925
 ; DO NOT EDIT DIRECTLY — edit knowledge_base.json and re-run generate_clp.py
 ; This is for academic demonstration only.
 ; ===========================================================
