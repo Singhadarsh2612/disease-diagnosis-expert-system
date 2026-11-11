@@ -23,13 +23,11 @@ services:
         generateValue: true
 
   # ---------------------------------------------------------------------------
-  # 2. React + Vite Frontend (SPA Static Site - Free & Unlimited)
+  # 2. React + Vite Frontend (SPA Static Site - Globally Distributed CDN)
   # ---------------------------------------------------------------------------
   - type: web
     name: disease-diagnosis-frontend
     runtime: static
-    plan: free
-    region: oregon
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
@@ -43,3 +41,4 @@ services:
           type: web
           name: disease-diagnosis-backend
           property: host
+
