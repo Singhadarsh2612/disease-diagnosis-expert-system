@@ -65,16 +65,27 @@ def create_app() -> Flask:
     from modules.doctor import doctor
     app.register_blueprint(doctor)
 
-    # Root redirect info
-    @app.route("/")
-    def index():
-        from flask import jsonify
-        return jsonify({
-            "app": "AI Disease Diagnosis Expert System",
-            "version": "1.0.0",
-            "api_docs": "/api/health",
-            "status": "running",
-        })
+    # Serve frontend SPA if built dist exists, otherwise return API status JSON
+    dist_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend", "dist"))
+    if os.path.isdir(dist_dir):
+        from flask import send_from_directory
+
+        @app.route("/", defaults={"path": ""})
+        @app.route("/<path:path>")
+        def serve_frontend(path):
+            if path and os.path.exists(os.path.join(dist_dir, path)):
+                return send_from_directory(dist_dir, path)
+            return send_from_directory(dist_dir, "index.html")
+    else:
+        @app.route("/")
+        def index():
+            from flask import jsonify
+            return jsonify({
+                "app": "AI Disease Diagnosis Expert System",
+                "version": "1.0.0",
+                "api_docs": "/api/health",
+                "status": "running",
+            })
 
     return app
 

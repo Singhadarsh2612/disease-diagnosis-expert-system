@@ -34,6 +34,54 @@ Frontend runs at **http://localhost:5173** — open this in your browser.
 
 ---
 
+## Deploy to Render
+
+The repository includes a ready-to-use [`render.yaml`](render.yaml) Blueprint configuration for 1-click deployment on [Render](https://render.com).
+
+### Option A — 1-Click Render Blueprint (Recommended)
+
+1. Log in to your [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** at the top right and select **Blueprint**.
+3. Connect your GitHub repository: `Singhadarsh2612/disease-diagnosis-expert-system`.
+4. Render will parse `render.yaml` and configure two services automatically:
+   - **`disease-diagnosis-backend`** (Python Web Service running Flask + Gunicorn on Python 3.11).
+   - **`disease-diagnosis-frontend`** (Static Site serving the compiled Vite React SPA — 100% free and unlimited on Render).
+5. Click **Apply**.
+6. Render builds both services and automatically wires `VITE_API_BASE_URL` from the backend to the frontend.
+7. Once deployment finishes (usually 2–3 minutes), click on the frontend URL to open the live app!
+
+### Option B — Manual Deployment
+
+If you prefer to configure services manually in Render:
+
+#### 1. Backend (Web Service)
+- **Service Type:** Web Service
+- **Root Directory:** `Heroku_backend`
+- **Runtime:** `Python 3`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `gunicorn app:app --workers=2 --timeout=120 --bind=0.0.0.0:$PORT`
+- **Plan:** Free
+- **Environment Variables:**
+  - `PYTHON_VERSION`: `3.11.9`
+  - `CORS_ORIGINS`: `*`
+  - `DOCTOR_USERNAME`: `doctor`
+  - `DOCTOR_PASSWORD`: `<choose_a_password>`
+  - `SECRET_KEY`: `<generate_random_key>`
+
+#### 2. Frontend (Static Site)
+- **Service Type:** Static Site
+- **Root Directory:** `frontend`
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `dist`
+- **Redirects/Rewrites:**
+  - Route: `/*`
+  - Destination: `/index.html`
+  - Action: `Rewrite`
+- **Environment Variables:**
+  - `VITE_API_BASE_URL`: `https://<your-backend-service-name>.onrender.com`
+
+---
+
 ## Running Tests
 
 ```bash

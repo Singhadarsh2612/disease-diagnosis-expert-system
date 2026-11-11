@@ -1,0 +1,45 @@
+services:
+  # ---------------------------------------------------------------------------
+  # 1. Flask Backend (API & Expert System Engine)
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: disease-diagnosis-backend
+    runtime: python
+    plan: free
+    region: oregon
+    rootDir: Heroku_backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers=2 --timeout=120 --bind=0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: DOCTOR_USERNAME
+        value: doctor
+      - key: DOCTOR_PASSWORD
+        generateValue: true
+      - key: SECRET_KEY
+        generateValue: true
+
+  # ---------------------------------------------------------------------------
+  # 2. React + Vite Frontend (SPA Static Site - Free & Unlimited)
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: disease-diagnosis-frontend
+    runtime: static
+    plan: free
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: disease-diagnosis-backend
+          property: host

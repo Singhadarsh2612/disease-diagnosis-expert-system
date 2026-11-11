@@ -1,7 +1,20 @@
 import axios from 'axios';
 
+const getBaseUrl = () => {
+  let url = import.meta.env.VITE_API_BASE_URL;
+  if (!url) return '/api';
+  url = url.trim();
+  if (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('/')) {
+    url = `https://${url}`;
+  }
+  if (!url.endsWith('/api') && !url.includes('/api')) {
+    url = `${url.replace(/\/+$/, '')}/api`;
+  }
+  return url;
+};
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: getBaseUrl(),
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 });
@@ -60,8 +73,7 @@ export const submitFeedback = (data) => api.post('/feedback', data);
 export const getDiseases = (params) => api.get('/diseases', { params });
 export const uploadCSV = (formData) =>
   api.post('/upload_csv', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
-export const getCSVTemplate = () =>
-  `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api'}/upload_csv/template`;
+export const getCSVTemplate = () => `${getBaseUrl()}/upload_csv/template`;
 
 // ── Doctor Portal calls ──────────────────────────────────────────────────────
 export const doctorLogin = (username, password) => api.post('/doctor/login', { username, password });
